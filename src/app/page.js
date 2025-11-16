@@ -26,12 +26,12 @@ export default function Home() {
             Pariez sur vos équipes
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              e-sportives préférées
+              de football préférées
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             La plateforme révolutionnaire de paris e-sportifs. 
-            Pariez sur League of Legends, CS:GO, Valorant et plus encore !
+            Pariez sur les meilleurs matchs de football : La Liga, Ligue 1, Champions League et plus encore !
           </p>
           <div className="flex gap-4 justify-center">
             <Link 
@@ -55,7 +55,7 @@ export default function Home() {
             <div className="text-4xl mb-4">🎮</div>
             <h3 className="text-2xl font-bold text-white mb-4">Tous les jeux</h3>
             <p className="text-gray-400">
-              Paris sur LoL, CS:GO, Valorant, Dota 2 et tous les jeux e-sportifs populaires
+              Paris sur La Liga, Premier League, Ligue 1, Botola Pro et tous les championnats de football
             </p>
           </div>
 

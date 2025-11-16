@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { LogoutButton } from '@/components/LogoutButton'  // ← AJOUTER
 
 export default function AdminTeams() {
   const [teams, setTeams] = useState([])
@@ -94,12 +95,15 @@ export default function AdminTeams() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-4xl font-bold mb-8"> Gestion des Équipes</h1>
+     <div className="flex justify-between items-center mb-8">
+     <h1 className="text-4xl font-bold"> Gestion des Équipes</h1>
+     <LogoutButton />
+     </div>
 
       {/* Formulaire */}
       <div className="bg-gray-800 p-6 rounded-lg mb-8 max-w-2xl">
         <h2 className="text-2xl font-semibold mb-4">
-          {editingId ? '✏️ Modifier' : ' Créer'} une équipe
+          {editingId ? ' Modifier' : ' Créer'} une équipe
         </h2>
         
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -118,16 +122,15 @@ export default function AdminTeams() {
           <div>
             <label className="block mb-2">Jeu *</label>
             <select
-              required
-              value={formData.game}
-              onChange={(e) => setFormData({ ...formData, game: e.target.value })}
-              className="w-full p-2 bg-gray-700 rounded"
-            >
-              <option value="">Choisir un jeu</option>
-              <option value="League of Legends">League of Legends</option>
-              <option value="CS:GO">CS:GO</option>
-              <option value="Valorant">Valorant</option>
-              <option value="Dota 2">Dota 2</option>
+            required
+            value={formData.game}
+            onChange={(e) => setFormData({ ...formData, game: e.target.value })}
+            className="w-full p-2 bg-gray-700 rounded">
+            <option value="">Choisir un sport</option>
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Rugby">Rugby</option>
+            <option value="Tennis">Tennis</option>
             </select>
           </div>
 
